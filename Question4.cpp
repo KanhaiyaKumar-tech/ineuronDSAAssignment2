@@ -15,8 +15,17 @@ bool canPlaceFlowers(std::vector<int>& flowerbed, int n) {
 }
 
 int main() {
-    std::vector<int> flowerbed = {1, 0, 0, 0, 1};
-    int n = 1;
+    //std::vector<int> flowerbed = {1, 0, 0, 0, 1};
+    int n ;
+    std::vector<int> flowerbed;
+    int num;
+    while (std::cin >> num) {
+        flowerbed.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
+    std::cin >>n;
     bool canPlant = canPlaceFlowers(flowerbed, n);
     std::cout << std::boolalpha << canPlant << std::endl; // Output: true
     return 0;

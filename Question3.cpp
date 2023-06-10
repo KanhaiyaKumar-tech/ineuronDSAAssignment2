@@ -19,7 +19,15 @@ int findLHS(std::vector<int>& nums) {
 }
 
 int main() {
-    std::vector<int> nums = {1, 3, 2, 2, 5, 2, 3, 7};
+    //std::vector<int> nums = {1, 3, 2, 2, 5, 2, 3, 7};
+    std::vector<int> nums;
+    int num;
+    while (std::cin >> num) {
+        nums.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
     int maxLen = findLHS(nums);
     std::cout << maxLen << std::endl; // Output: 5
     return 0;

@@ -23,7 +23,15 @@ bool isMonotonic(std::vector<int>& nums) {
 }
 
 int main() {
-    std::vector<int> nums = {1, 2, 2, 3};
+    //std::vector<int> nums = {1, 2, 2, 3};
+    std::vector<int> nums;
+    int num;
+    while (std::cin >> num) {
+        nums.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
     bool isMonotonicArray = isMonotonic(nums);
     std::cout << std::boolalpha << isMonotonicArray << std::endl; // Output: true
     return 0;

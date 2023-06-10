@@ -22,8 +22,17 @@ int search(std::vector<int>& nums, int target) {
 }
 
 int main() {
-    std::vector<int> nums = {-1, 0, 3, 5, 9, 12};
-    int target = 9;
+    //std::vector<int> nums = {-1, 0, 3, 5, 9, 12};
+    int target ;
+    std::vector<int> nums;
+    int num;
+    while (std::cin >> num) {
+        nums.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
+    std::cin>>target;
     int index = search(nums, target);
     std::cout << index << std::endl; // Output: 4
     return 0;

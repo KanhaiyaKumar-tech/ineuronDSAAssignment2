@@ -12,7 +12,15 @@ int arrayPairSum(std::vector<int>& nums) {
 }
 
 int main() {
-    std::vector<int> nums = {1, 4, 3, 2};
+    //std::vector<int> nums = {1, 4, 3, 2};
+    std::vector<int> nums;
+    int num;
+    while (std::cin >> num) {
+        nums.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
     int max_sum = arrayPairSum(nums);
     std::cout << max_sum << std::endl; // Output: 4
     return 0;

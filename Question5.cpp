@@ -11,7 +11,15 @@ int maximumProduct(std::vector<int>& nums) {
 }
 
 int main() {
-    std::vector<int> nums = {1, 2, 3};
+    //std::vector<int> nums = {1, 2, 3};
+    std::vector<int> nums;
+    int num;
+    while (std::cin >> num) {
+        nums.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
     int maxProduct = maximumProduct(nums);
     std::cout << maxProduct << std::endl; // Output: 6
     return 0;

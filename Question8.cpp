@@ -24,8 +24,17 @@ int minimumScore(std::vector<int>& nums, int k) {
 }
 
 int main() {
-    std::vector<int> nums = {1};
-    int k = 0;
+    //std::vector<int> nums = {1};
+    int k ;
+    std::vector<int> nums;
+    int num;
+    while (std::cin >> num) {
+        nums.push_back(num);
+        if (std::cin.peek() == '\n') {
+            break;
+        }
+    }
+    std::cin>>k;
     int minimum = minimumScore(nums, k);
     std::cout << minimum << std::endl; // Output: 0
     return 0;
